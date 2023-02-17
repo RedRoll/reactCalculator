@@ -7,9 +7,10 @@ function CountBtns (props) {
    
 
     function checkExpression () {
-        if(expressions.test(lastNumber) || props.data === '0')   
+        if(expressions.test(lastNumber) || props.data === '0') 
         return 
-        props.onClick(props.data + props.expression)
+        // если условие if выдает true(тоесть, последний символ совпадает с тем символом который прописан в регулярном выражении, то происходит остановка функции! ПУСТОЙ RETURN ПРЕКРАЩАЕТ РАБОТУ ФУНКЦИИ!!!!)
+        else props.onClick(props.data + props.expression)
     }
 
     // || - оператор " или "
