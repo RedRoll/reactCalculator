@@ -1,7 +1,7 @@
 import { Text, Box, Button } from "@chakra-ui/react"
 import { useState } from "react"
 
-function ClickClack () {
+function ClickCalk () {
 
     const [counts, setCounts] = useState('0')
     const [result, setResult] = useState('')
@@ -60,9 +60,9 @@ function ClickClack () {
     }
 
     return (
-        <div className="App">
+        
 
-        <Box className='bodyCalculator' display="flex" h="100vh" alignItems="center" justifyContent="center">
+        // <Box className='bodyCalculator' display="flex" h="100vh" alignItems="center" justifyContent="center">
   
           <Box className='calculator' borderRadius="5px" border="1px" borderColor="orange.200" display="flex" flexDirection="column" alignItems="center" gap="10px" px="7px" py="10px" >
   
@@ -93,11 +93,11 @@ function ClickClack () {
   
           </Box>
   
-        </Box>
+        // </Box>
   
-      </div>
+      
     )
 
 }
 
-export default ClickClack
+export default ClickCalk
