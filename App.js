@@ -1,10 +1,10 @@
 import './App.css';
-import ClickClack from './Components/ClickCalc';
+import Calculator from './Components/Calculator';
 
 function App() {
 
   return (
-    <ClickClack />
+    <Calculator />
   );
 
 }
