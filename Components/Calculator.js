@@ -27,11 +27,15 @@ function Calculator () {
 
 
     return(
-        <Box display='flex' flexDirection='column' justifyContent='center' p='10px' gap='10px'>
-            <Button onClick={calcTypeChange}>CHANGE MODE</Button>
+        <Box display='flex' justifyContent='center'>
+            
+        <Box display='flex' flexDirection='column' alignItems='center'  p='10px' gap='10px' w='fit-content'>
+            <Button w='100%' onClick={calcTypeChange}>CHANGE MODE        </Button>
             <Box>
-            {calculator}
+                {calculator}
             </Box>
+        </Box>
+
         </Box>
     )
     

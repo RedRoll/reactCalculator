@@ -23,14 +23,14 @@ function ClickCalk () {
                 return <Button onClick={ event => {
                     if(props.data !== '0') props.onClick(props.data + event.target.innerHTML)
                     else props.onClick(event.target.innerHTML)
-                } } key={number} h="40px" w="43px">{number}</Button>
+                } } key={number} h="60px" w="60px" fontSize='25px'>{number}</Button>
                 
             }
         )
         
     
         return (
-            <Box display="flex" justifyContent="start" flexWrap="wrap" w="158px" gap="6px">
+            <Box display="flex" justifyContent="start" flexWrap="wrap" w="200px" gap="6px">
                 {numbers}
             </Box>
         )
@@ -55,7 +55,7 @@ function ClickCalk () {
         return (
             <Button onClick={() => {
                 checkExpression()
-            }}>{props.expression}</Button>
+            }} w='60px' h='60px' fontSize='25px'>{props.expression}</Button>
         )
     }
 
@@ -64,20 +64,20 @@ function ClickCalk () {
 
         // <Box className='bodyCalculator' display="flex" h="100vh" alignItems="center" justifyContent="center">
   
-          <Box className='calculator' borderRadius="5px" border="1px" borderColor="orange.200" display="flex" flexDirection="column" alignItems="center" gap="10px" px="7px" py="10px" >
+          <Box className='calculator' borderRadius="5px" border="2px" borderColor="red.400" display="flex" flexDirection="column" alignItems="center" gap="10px" px="7px" py="10px">
   
             
   
-            <Box className='resultLine' display="flex" w="200px" border="1px" borderColor="orange" justifyContent="space-between" marginTop="5px" borderRadius="6px" bgColor="red.200">
-              <Text className='countInfo' px="3px">{counts}</Text>
-              <Text className='result' textColor="white" px="3px">{result}</Text>
+            <Box className='resultLine' display="flex" border="2px" borderColor="black" justifyContent="space-between" marginTop="5px" borderRadius="6px" bgColor="red.200" w='100%' h='60px' alignItems='center' fontSize='25px' mb='25px'>
+              <Text className='countInfo' px="10px">{counts}</Text>
+              <Text className='result' textColor="white" px="10px">{result}</Text>
             </Box>
   
             <Box className='btnsInside' display="flex" alignItems="start" flexDirection="row">
   
             <Box>
               <Btns data={counts} onClick={setCounts} />
-              <Button display="flex" justifyContent="start" marginTop="6px" onClick={clear} bgColor="green.100">clear</Button>
+              <Button display="flex" justifyContent="center" marginTop="6px" onClick={clear} bgColor="green.100" w='60px' h='60px' fontSize='25px'>C</Button>
             </Box>
   
             <Box className='countBtns' display="flex" flexDirection="column-reverse" gap="6px">
@@ -86,7 +86,7 @@ function ClickCalk () {
               <CountBtns data={counts} expression={'+'} onClick={applyExpression} />
               <CountBtns data={counts} expression={'-'} onClick={applyExpression} />
   
-              <Button onClick = {() => {setResult(eval(counts))}} bgColor="tomato">=</Button>
+              <Button onClick = {() => {setResult(eval(counts))}} bgColor="tomato" h='60px' fontSize='25px'>=</Button>
             </Box>
   
             </Box>
