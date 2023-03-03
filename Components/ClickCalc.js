@@ -17,16 +17,19 @@ function ClickCalk () {
 
     function Btns (props) {
 
-        const numbers = Array.from(Array(10).keys()).map(
+        const numbers = ['7', '8', '9', '4', '5', '6', '1', '2', '3', '0', ','].map(
             number => {
     
                 return <Button onClick={ event => {
+                    if( props.data === '0' && event.nativeEvent.target.innerHTML === ',') return
+                    console.log(event.nativeEvent.target.innerHTML)
                     if(props.data !== '0') props.onClick(props.data + event.target.innerHTML)
                     else props.onClick(event.target.innerHTML)
                 } } key={number} h="60px" w="60px" fontSize='25px'>{number}</Button>
                 
             }
         )
+        
         
     
         return (
